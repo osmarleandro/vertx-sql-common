@@ -18,7 +18,6 @@ package io.vertx.ext.sql.impl;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.json.JsonArray;
-import io.vertx.core.streams.ReadStream;
 import io.vertx.ext.sql.SQLConnection;
 import io.vertx.ext.sql.SQLRowStream;
 
@@ -115,14 +114,11 @@ public class RowStreamWrapper implements SQLRowStream {
 
   @Override
   public void close(Handler<AsyncResult<Void>> handler) {
-    extracted(handler);
-  }
-
-  private void extracted(Handler<AsyncResult<Void>> handler) {
     rowStream.close(h1 -> closeConnection(h2 -> {
       if (handler != null) {
         handler.handle(h1);
       }
     }));
   }
+
 }
