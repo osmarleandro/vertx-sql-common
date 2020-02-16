@@ -115,7 +115,11 @@ public class RowStreamWrapper implements SQLRowStream {
 
   @Override
   public void close(Handler<AsyncResult<Void>> handler) {
-    extracted(handler);
+    rowStream.close(h1 -> closeConnection(h2 -> {
+	  if (handler != null) {
+	    handler.handle(h1);
+	  }
+	}));
   }
 
 private void extracted(Handler<AsyncResult<Void>> handler) {
