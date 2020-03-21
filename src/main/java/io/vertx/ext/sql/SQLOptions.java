@@ -25,7 +25,7 @@ import io.vertx.core.json.JsonObject;
  * @author <a href="mailto:plopes@redhat.com">Paulo Lopes</a>
  */
 @DataObject(generateConverter = true)
-public class SQLOptions {
+public class SQLOptions implements ExtractedInterface {
 
   // connection
   private boolean readOnly;
