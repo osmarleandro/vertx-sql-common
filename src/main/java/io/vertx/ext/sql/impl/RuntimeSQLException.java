@@ -14,7 +14,7 @@
  * You may elect to redistribute this code under either of these licenses.
  */
 
-package io.vertx.ext.sql;
+package io.vertx.ext.sql.impl;
 
 import java.sql.SQLException;
 
