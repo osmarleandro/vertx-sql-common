@@ -15,7 +15,6 @@ import io.vertx.core.json.JsonObject;
 @DataObject(generateConverter = true)
 public class UpdateResult extends ExtractedSuperclas {
 
-  private int updated;
   private JsonArray keys;
 
   /**
@@ -75,7 +74,7 @@ public class UpdateResult extends ExtractedSuperclas {
     return updated;
   }
 
-  public UpdateResult setUpdated(int updated) {
+  public ExtractedSuperclas setUpdated(int updated) {
     this.updated = updated;
     return this;
   }
@@ -89,7 +88,7 @@ public class UpdateResult extends ExtractedSuperclas {
     return keys;
   }
 
-  public UpdateResult setKeys(JsonArray keys) {
+  public ExtractedSuperclas setKeys(JsonArray keys) {
     this.keys = keys;
     return this;
   }

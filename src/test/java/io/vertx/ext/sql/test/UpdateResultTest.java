@@ -2,6 +2,7 @@ package io.vertx.ext.sql.test;
 
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
+import io.vertx.ext.sql.ExtractedSuperclas;
 import io.vertx.ext.sql.UpdateResult;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +42,7 @@ public class UpdateResultTest {
   public void testJson() {
 
     JsonObject json = ur.toJson();
-    UpdateResult ur2 = new UpdateResult(json);
+    ExtractedSuperclas ur2 = new UpdateResult(json);
     assertEquals(ur, ur2);
 
   }
