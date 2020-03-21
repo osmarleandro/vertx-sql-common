@@ -107,4 +107,9 @@ public class UpdateResult extends ExtractedSuperclas {
     result = 31 * result + (keys != null ? keys.hashCode() : 0);
     return result;
   }
+
+public ExtractedSuperclas setUpdated(int updated) {
+    this.updated = updated;
+    return this;
+  }
 }

@@ -8,9 +8,4 @@ public class ExtractedSuperclas {
 		super();
 	}
 
-	public ExtractedSuperclas setUpdated(int updated) {
-	    this.updated = updated;
-	    return this;
-	  }
-
 }
