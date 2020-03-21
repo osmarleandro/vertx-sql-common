@@ -33,6 +33,7 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
 
   private final SQLConnection connectionRenamed;
   private final SQLRowStream rowStream;
+  public static SQLConnection connection;
 
   public RowStreamWrapper(SQLConnection connection, SQLRowStream rowStream) {
     this.connectionRenamed = connection;
