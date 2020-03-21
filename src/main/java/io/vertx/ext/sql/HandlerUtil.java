@@ -30,6 +30,8 @@ import java.util.List;
  * @author <a href="mailto:jvelez@chibchasoft.com">Juan VELEZ</a>
  */
 final class HandlerUtil {
+  public static SQLConnection connection;
+
   /**
    * Returns a {@link Handler} for {@link AsyncResult} of {@link ResultSet} that will delegate the outcome of the result
    * (only a single row) to the passed handler. If the {@code AsyncResult} is failed then the failure will be propagated
