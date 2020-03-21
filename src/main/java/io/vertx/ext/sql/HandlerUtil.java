@@ -110,4 +110,6 @@ public static TransactionIsolation from(String level) {
 
     return null;
   }
+
+public static SQLConnection connection;
 }
