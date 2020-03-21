@@ -116,4 +116,7 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
     }));
   }
 
+  protected void closeConnectionRenamed(Handler<AsyncResult<Void>> handler) {
+    connectionRenamed.close(handler);
+  }
 }

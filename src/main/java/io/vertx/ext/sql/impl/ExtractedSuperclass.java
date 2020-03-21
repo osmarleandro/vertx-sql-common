@@ -11,7 +11,4 @@ public class ExtractedSuperclass {
     this.connectionRenamed = connection;
   }
 
-  protected void closeConnectionRenamed(Handler<AsyncResult<Void>> handler) {
-    connectionRenamed.close(handler);
-  }
 }
