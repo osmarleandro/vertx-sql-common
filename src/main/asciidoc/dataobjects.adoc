@@ -45,8 +45,8 @@ Get the rows - each row represented as a JsonObject where the keys are the colum
 +++
 |===
 
-[[SQLOptions]]
-== SQLOptions
+[[SQLOptionsRenamed]]
+== SQLOptionsRenamed
 
 ++++
  Represents the options one can use to customize the unwrapped connection/statement/resultset types

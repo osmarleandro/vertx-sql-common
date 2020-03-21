@@ -46,7 +46,7 @@ public interface SQLConnection extends SQLOperations, Closeable {
    * @param options  the options to modify the unwrapped connection.
    */
   @Fluent
-  SQLConnection setOptions(SQLOptions options);
+  SQLConnection setOptions(SQLOptionsRenamed options);
 
   /**
    * Sets the auto commit flag for this connection. True by default.
@@ -221,12 +221,12 @@ public interface SQLConnection extends SQLOperations, Closeable {
    * It can be over written at any time and becomes active on the next query call.
    *
    * @param timeoutInSeconds the max amount of seconds the query can take to execute.
-   * @deprecated instead use {@link #setOptions(SQLOptions)} with {@link SQLOptions#setQueryTimeout(int)}
+   * @deprecated instead use {@link #setOptions(SQLOptionsRenamed)} with {@link SQLOptionsRenamed#setQueryTimeout(int)}
    */
   @Fluent
   @Deprecated
   default SQLConnection setQueryTimeout(int timeoutInSeconds) {
-    setOptions(new SQLOptions().setQueryTimeout(timeoutInSeconds));
+    setOptions(new SQLOptionsRenamed().setQueryTimeout(timeoutInSeconds));
     return this;
   }
 

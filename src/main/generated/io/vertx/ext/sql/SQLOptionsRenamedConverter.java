@@ -2,12 +2,14 @@ package io.vertx.ext.sql;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.json.JsonArray;
+import java.time.Instant;
+import java.time.format.DateTimeFormatter;
 
 /**
- * Converter and mapper for {@link SQLOptionsRenamed}.
- * NOTE: This class has been automatically generated from the {@link SQLOptionsRenamed} original class using Vert.x codegen.
+ * Converter and mapper for {@link io.vertx.ext.sql.SQLOptionsRenamed}.
+ * NOTE: This class has been automatically generated from the {@link io.vertx.ext.sql.SQLOptionsRenamed} original class using Vert.x codegen.
  */
-public class SQLOptionsConverter {
+public class SQLOptionsRenamedConverter {
 
 
   public static void fromJson(Iterable<java.util.Map.Entry<String, Object>> json, SQLOptionsRenamed obj) {
