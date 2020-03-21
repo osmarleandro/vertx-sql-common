@@ -16,6 +16,7 @@ import io.vertx.core.json.JsonObject;
 public class UpdateResult extends ExtractedSuperclas {
 
   private JsonArray keys;
+protected int updated;
 
   /**
    * Default constructor
