@@ -30,11 +30,10 @@ import java.util.List;
  */
 public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStream {
 
-  private final SQLConnection connectionRenamed;
   private final SQLRowStream rowStream;
 
   public RowStreamWrapper(SQLConnection connection, SQLRowStream rowStream) {
-    this.connectionRenamed = connection;
+    super(connection);
     this.rowStream = rowStream;
   }
 
