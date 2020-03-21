@@ -74,11 +74,6 @@ public class UpdateResult extends ExtractedSuperclas {
     return updated;
   }
 
-  public ExtractedSuperclas setUpdated(int updated) {
-    this.updated = updated;
-    return this;
-  }
-
   /**
    * Get any generated keys
    *
