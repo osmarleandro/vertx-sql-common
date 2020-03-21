@@ -13,7 +13,7 @@ import io.vertx.core.json.JsonObject;
  * @author <a href="http://tfox.org">Tim Fox</a>
  */
 @DataObject(generateConverter = true)
-public class UpdateResult {
+public class UpdateResult extends ExtractedSuperclas {
 
   private int updated;
   private JsonArray keys;
