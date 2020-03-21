@@ -7,6 +7,8 @@ import io.vertx.ext.sql.SQLConnection;
 public class ExtractedSuperclass {
   protected final SQLConnection connectionRenamed ;
 
+  private SQLConnection connection;
+
   public ExtractedSuperclass(SQLConnection connection) {
     this.connectionRenamed = connection;
   }
