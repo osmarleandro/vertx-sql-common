@@ -29,7 +29,7 @@ import java.util.List;
  *
  * @author <a href="mailto:ruslan.sennov@gmail.com">Ruslan Sennov</a>
  */
-public class RowStreamWrapper implements SQLRowStream {
+public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStream {
 
   private final SQLConnection connection;
   private final SQLRowStream rowStream;
