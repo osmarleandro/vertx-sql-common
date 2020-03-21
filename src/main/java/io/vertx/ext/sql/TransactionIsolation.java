@@ -87,22 +87,4 @@ public enum TransactionIsolation {
     }
   }
 
-  public static TransactionIsolation from(String level) {
-    if (level != null) {
-      switch (level.replace('-', ' ').toUpperCase()) {
-        case "READ COMMITTED":
-          return TransactionIsolation.READ_COMMITTED;
-        case "READ UNCOMMITTED":
-          return TransactionIsolation.READ_UNCOMMITTED;
-        case "REPEATABLE READ":
-          return TransactionIsolation.REPEATABLE_READ;
-        case "SERIALIZABLE":
-          return TransactionIsolation.SERIALIZABLE;
-        case "NONE":
-          return TransactionIsolation.NONE;
-      }
-    }
-
-    return null;
-  }
 }
