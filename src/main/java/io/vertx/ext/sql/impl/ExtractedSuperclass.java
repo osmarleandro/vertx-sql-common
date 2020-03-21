@@ -1,5 +1,7 @@
 package io.vertx.ext.sql.impl;
 
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import io.vertx.ext.sql.SQLConnection;
 
 public class ExtractedSuperclass {
@@ -7,5 +9,9 @@ public class ExtractedSuperclass {
 
   public ExtractedSuperclass(SQLConnection connection) {
     this.connectionRenamed = connection;
+  }
+
+  protected void closeConnectionRenamed(Handler<AsyncResult<Void>> handler) {
+    connectionRenamed.close(handler);
   }
 }

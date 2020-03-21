@@ -37,10 +37,6 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
     this.rowStream = rowStream;
   }
 
-  private void closeConnectionRenamed(Handler<AsyncResult<Void>> handler) {
-    connectionRenamed.close(handler);
-  }
-
   @Override
   public SQLRowStream exceptionHandler(Handler<Throwable> handler) {
     if (handler == null) {
