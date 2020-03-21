@@ -38,7 +38,7 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
     this.rowStream = rowStream;
   }
 
-  private void closeConnection(Handler<AsyncResult<Void>> handler) {
+  private void closeConnectionRenamed(Handler<AsyncResult<Void>> handler) {
     connection.close(handler);
   }
 
@@ -47,7 +47,7 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
     if (handler == null) {
       rowStream.exceptionHandler(null);
     } else {
-      rowStream.exceptionHandler(h1 -> closeConnection(h2 -> handler.handle(h1)));
+      rowStream.exceptionHandler(h1 -> closeConnectionRenamed(h2 -> handler.handle(h1)));
     }
     return this;
   }
@@ -81,7 +81,7 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
     if (endHandler == null) {
       rowStream.endHandler(null);
     } else {
-      rowStream.endHandler(h1 -> closeConnection(h2 -> endHandler.handle(h1)));
+      rowStream.endHandler(h1 -> closeConnectionRenamed(h2 -> endHandler.handle(h1)));
     }
     return this;
   }
@@ -114,7 +114,7 @@ public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStrea
 
   @Override
   public void close(Handler<AsyncResult<Void>> handler) {
-    rowStream.close(h1 -> closeConnection(h2 -> {
+    rowStream.close(h1 -> closeConnectionRenamed(h2 -> {
       if (handler != null) {
         handler.handle(h1);
       }
