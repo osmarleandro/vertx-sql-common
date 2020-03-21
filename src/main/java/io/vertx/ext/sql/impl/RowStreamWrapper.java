@@ -31,6 +31,7 @@ import java.util.List;
 public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStream {
 
   private final SQLRowStream rowStream;
+  private SQLConnection connection;
 
   public RowStreamWrapper(SQLConnection connection, SQLRowStream rowStream) {
     super(connection);
