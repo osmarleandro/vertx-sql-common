@@ -31,16 +31,16 @@ import java.util.List;
  */
 public class RowStreamWrapper extends ExtractedSuperclass implements SQLRowStream {
 
-  private final SQLConnection connection;
+  private final SQLConnection connectionRenamed;
   private final SQLRowStream rowStream;
 
   public RowStreamWrapper(SQLConnection connection, SQLRowStream rowStream) {
-    this.connection = connection;
+    this.connectionRenamed = connection;
     this.rowStream = rowStream;
   }
 
   private void closeConnectionRenamed(Handler<AsyncResult<Void>> handler) {
-    connection.close(handler);
+    connectionRenamed.close(handler);
   }
 
   @Override
